@@ -1,11 +1,8 @@
 #include <algorithm>
 #include <cstdio>
+#include <cmath>
 
 using namespace std;
-
-double absolute(double x) {
-    return x < 0.0 ? -x : x;
-}
 
 int main() {
     int m;
@@ -17,7 +14,7 @@ int main() {
         for (int k = 0; k < 4; ++k) {
             int pivot = k;
             for (int i = k + 1; i < 4; ++i)
-                if (absolute(a[i][k]) > absolute(a[pivot][k])) pivot = i;
+                if (fabs(a[i][k]) > fabs(a[pivot][k])) pivot = i;
             for (int j = 0; j < 5; ++j) swap(a[k][j], a[pivot][j]);
             double divisor = a[k][k];
             for (int j = k; j < 5; ++j) a[k][j] /= divisor;

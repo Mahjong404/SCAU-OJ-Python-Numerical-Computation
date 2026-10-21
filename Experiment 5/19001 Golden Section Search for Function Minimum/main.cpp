@@ -1,9 +1,10 @@
 #include <cstdio>
+#include <cmath>
 
 using namespace std;
 
 double f(double x) {
-    return __builtin_exp(x) - 2.0 * x * x;
+    return exp(x) - 2.0 * x * x;
 }
 
 int main() {
