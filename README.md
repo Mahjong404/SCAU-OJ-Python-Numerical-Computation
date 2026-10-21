@@ -20,14 +20,13 @@ SCAU《数值计算》课程 OJ 实验题目整理与 Python 解答项目。
 
 ## 目录结构
 
-题目目录按 OJ 实验节点和题号组织：
+题目目录按 OJ 实验节点和题号组织，文件夹名使用英文：
 
 ```
-数值计算实验/
-└── 数值计算实验1.1/
-    └── 18957 计算自然对数ln(x)的导数/
-        ├── problem.md
-        └── problem.json
+Experiment 1.1/
+└── 18957 Derivative of Natural Logarithm ln(x)/
+    ├── problem.md
+    └── problem.json
 ```
 
 - `problem.md` 便于阅读。

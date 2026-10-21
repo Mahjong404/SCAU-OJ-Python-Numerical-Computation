@@ -1,0 +1,35 @@
+{
+  "problemId": "18957",
+  "title": "计算自然对数ln(x)的导数",
+  "experiment": "数值计算实验1.1",
+  "experimentPid": 1452,
+  "sourceUrl": "https://acm.scau.edu.cn/uoj8000/common_problem_view_PUBLIC.html?problemId=18957",
+  "sections": [
+    {
+      "name": "Description",
+      "html": "求自然对数ln(x)的导数，输入双精度实数x&gt;=1，输出自然对数ln(x)的导数（精确到小数点后2位有效数，小数点后第2位四舍五入所得）。",
+      "text": "求自然对数ln(x)的导数，输入双精度实数x>=1，输出自然对数ln(x)的导数（精确到小数点后2位有效数，小数点后第2位四舍五入所得）。"
+    },
+    {
+      "name": "输入格式",
+      "html": "m(整数，实验数据总数)\nx1(实数，自然对数ln(x)的自变量)\nX2实数，自然对数ln(x)的自变量)\n...\nxm(实数，自然对数ln(x)的自变量)\n",
+      "text": "m(整数，实验数据总数)\nx1(实数，自然对数ln(x)的自变量)\nX2实数，自然对数ln(x)的自变量)\n...\nxm(实数，自然对数ln(x)的自变量)\n"
+    },
+    {
+      "name": "输出格式",
+      "html": "y1(实数，自然对数ln(x1)的导数)\ny2实数，自然对数ln(x2)的导数)\n...\nym(实数，自然对数ln(xm)的导数)\n",
+      "text": "y1(实数，自然对数ln(x1)的导数)\ny2实数，自然对数ln(x2)的导数)\n...\nym(实数，自然对数ln(xm)的导数)\n"
+    },
+    {
+      "name": "输入样例",
+      "html": "3\n1.0\n2.0\n3.0\n",
+      "text": "3\n1.0\n2.0\n3.0\n"
+    },
+    {
+      "name": "输出样例",
+      "html": "1.00\n0.50\n0.33\n",
+      "text": "1.00\n0.50\n0.33\n"
+    }
+  ],
+  "imageUrls": []
+}
