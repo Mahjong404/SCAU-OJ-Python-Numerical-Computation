@@ -1,12 +1,14 @@
 #include <cstdio>
 
+using namespace std;
+
 int main() {
     int m;
-    std::scanf("%d", &m);
+    scanf("%d", &m);
     while (m--) {
         double x;
-        std::scanf("%lf", &x);
-        std::printf("%.2f\n", 1.0 / x);
+        scanf("%lf", &x);
+        printf("%.2f\n", 1.0 / x);
     }
     return 0;
 }
