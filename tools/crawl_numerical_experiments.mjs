@@ -3,13 +3,17 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const targetId = process.argv[2];
+const proxy = process.env.CDP_PROXY_URL;
 if (!targetId) {
   console.error('Usage: node tools/crawl_numerical_experiments.mjs <mainMenu-targetId>');
   process.exit(1);
 }
+if (!proxy) {
+  console.error('Set CDP_PROXY_URL to the connected CDP Proxy endpoint before running this script.');
+  process.exit(1);
+}
 
 const base = 'https://acm.scau.edu.cn/uoj8000';
-const proxy = 'http://127.0.0.1:3456';
 const outputRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 const experiments = [

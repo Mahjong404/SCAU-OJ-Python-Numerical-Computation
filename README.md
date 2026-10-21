@@ -1,10 +1,10 @@
 # Python Numerical Computation
 
-SCAU《数值计算》课程 OJ 实验题目整理与 Python 解答项目。
+SCAU《数值计算》课程 OJ 实验题目归档与 Python 解答。
 
 ## 当前范围
 
-本次从 OJ 的“实验 → 数值计算 → 数值计算实验”读取了 9 个实验节点，共 9 道题。当前归档的是题目原文，尚未添加 Python 解答。
+本仓库整理 OJ“实验 → 数值计算 → 数值计算实验”中的 9 道题目。当前保存题面原文，尚未添加 Python 解答。
 
 | OJ 实验 | pid | 题号 | 题目 |
 |---------|-----|------|------|
@@ -20,25 +20,33 @@ SCAU《数值计算》课程 OJ 实验题目整理与 Python 解答项目。
 
 ## 目录结构
 
-题目目录按 OJ 实验节点和题号组织，文件夹名使用英文：
+题目按 OJ 实验节点和题号归档，目录名使用英文：
 
-```
+```text
 Experiment 1.1/
 └── 18957 Derivative of Natural Logarithm ln(x)/
     ├── problem.md
     └── problem.json
 ```
 
-- `problem.md` 便于阅读。
-- `problem.json` 保存题目各段的原始 HTML 与文本，以及不含临时访问参数的 OJ 来源链接。
-- 后续需要解题时，可在题目目录中添加 `main.py`。
+- `problem.md` 提供便于阅读的题面。
+- `problem.json` 保存题目各段原始 HTML 和文本，以及不含临时访问参数的 OJ 来源链接。
+- Python 解答放在同题目录的 `main.py`，从仓库根目录运行。
+
+## 文档
+
+- [Python 解答规范](./docs/代码规范.md)
+- [OJ 访问与抓取指南](./docs/OJ-访问指南.md)
+- [数值计算提交注意事项](./docs/OJ提交易错点总结.md)
 
 ## 重新读取 OJ 题目
 
-使用已登录的 Edge 浏览器和 web-access CDP Proxy：
+准备已登录 OJ 的浏览器页面并连接 CDP Proxy，从页面列表取得 mainMenu 页面 ID。然后在 PowerShell 中从仓库根目录运行：
 
-```bash
-node tools/crawl_numerical_experiments.mjs <mainMenu-targetId>
+```powershell
+$env:CDP_PROXY_URL = Read-Host "CDP Proxy URL"
+$targetId = Read-Host "mainMenu target ID"
+node tools/crawl_numerical_experiments.mjs $targetId
 ```
 
-目标 ID 可从 `http://localhost:3456/targets` 的页面列表中找到。脚本会串行访问九个实验节点，页面加载之间等待 5 秒，不会提交代码到 OJ。
+脚本串行读取九个实验节点，每次页面加载后等待 5 秒，只读取题面，不会向 OJ 提交代码。请勿将浏览器会话信息、临时访问参数或个人机器路径写入仓库。
